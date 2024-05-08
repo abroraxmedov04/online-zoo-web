@@ -1,0 +1,19 @@
+// base
+
+@use "./base/fonts";
+@use "./base/normalize";
+@use "./base/general";
+@use "./utils/variables";
+@use "./utils/mixins";
+
+// component
+
+@use "./components/container";
+
+// layouts
+@use "./layouts/header";
+@use "./layouts/hero";
+@use "./layouts/how-works";
+@use "./layouts/payments";
+
+@use "./layouts/footer";

@@ -1,0 +1,91 @@
+@use "../utils/mixins" as mix;
+@use "../utils/variables" as var;
+
+.howitworks {
+  &__inner {
+    padding-block: 32px;
+  }
+
+  &__title {
+    font-family: var.$rubik-font;
+    font-size: 18px;
+    line-height: 21px;
+    color: var.$text-color-green;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    @include mix.media(992px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.howitworks__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  @include mix.media(640px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.card__image-wr {
+  width: 113px;
+  height: 113px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: #ffffff;
+  box-shadow: rgba(151, 160, 169, 0.2) 0px 0px 24px;
+
+  @include mix.media(992px) {
+    width: 145px;
+    height: 145px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  text-align: center;
+  max-width: 188px;
+  width: 100%;
+  padding-bottom: 21px;
+
+  @include mix.media(992px) {
+    max-width: 355px;
+    width: 100%;
+  }
+}
+
+.card__desc {
+  font-size: 14px;
+  line-height: 20px;
+  color: var.$text-color-green;
+}
+
+.howitworks--bottom-image {
+  background-image: url("../../assets/images/Illustrations.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 320px;
+  margin-bottom: 70px;
+
+  @include mix.media(640px) {
+    height: 291px;
+  }
+
+  @include mix.media(992px) {
+    height: 523px;
+  }
+}
