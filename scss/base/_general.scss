@@ -26,3 +26,18 @@ body {
   font-family: var.$main-font;
   background-color: #f5f9fa;
 }
+
+/* Track */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #196469;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

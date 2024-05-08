@@ -1,0 +1,319 @@
+@use "../utils/mixins" as mix;
+@use "../utils/variables" as var;
+
+// SITE-ZOO
+.site-zoo {
+  &__inner {
+    position: relative;
+    margin-top: 70px;
+    &::after {
+      content: "";
+      width: 35px;
+      height: 100px;
+      top: 46%;
+      right: 0;
+      position: absolute;
+      background-image: url("../../assets/images/pay-zoo-arrow.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    font-family: var.$rubik-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.33px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: var.$text-color-green;
+  }
+
+  &__text {
+    width: 210px;
+    position: relative;
+    margin-top: 22px;
+    padding-bottom: 24px;
+    padding-top: 230px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+
+    &::after {
+      content: "";
+      width: 26px;
+      height: 26px;
+      top: 17px;
+      right: 21px;
+      position: absolute;
+      background-image: url("../../assets/images/tc-icon.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__control {
+    border-top: 2px solid rgba(222, 232, 234, 1);
+    padding-top: 12px;
+    padding-inline: 15px;
+
+    &::before {
+      content: "";
+      width: 152px;
+      height: 147px;
+      position: absolute;
+      top: 50px;
+      left: 14%;
+      background-image: url("../../assets/images/panda-png.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__animal-name {
+    font-size: 17.45px;
+    font-weight: 600;
+    line-height: 20.45px;
+    color: #2d2d2d;
+    margin-bottom: 10px;
+  }
+
+  &__paragrph {
+    font-size: 13.09px;
+    font-weight: 400;
+    line-height: 15.34px;
+    color: #909090;
+  }
+
+  &__btn {
+    margin-inline: auto;
+    display: block;
+    position: relative;
+    margin-top: 52px;
+    padding-block: 10px;
+    border: 1.5px solid var.$main-bg-medium-green;
+    border-radius: 25px;
+    padding-left: 54px;
+    padding-right: 22px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: var.$main-bg-medium-green;
+    letter-spacing: 10%;
+
+    display: none;
+
+    @include mix.media(640px) {
+      display: block;
+    }
+  }
+
+  &__span {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 18px;
+    background-image: url("../../assets/images/heart-dc.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.monkay {
+  &::before {
+    content: "";
+    width: 152px;
+    height: 147px;
+    position: absolute;
+    top: 50px;
+    left: 14%;
+    background-image: url("../../assets/images/monkey-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.aligator-text,
+.elephant-text {
+  display: none;
+}
+
+.gorillas-text,
+.lemurs-text,
+.engles {
+  display: none;
+}
+
+// SITE-ZOO media 355px ga yozilgani
+.site-zoo {
+  &__text {
+    width: 240px;
+    margin-inline: auto;
+  }
+
+  &__control {
+    &::before {
+      left: 18%;
+    }
+  }
+}
+
+// SITE-ZOO media640px ga yozilgani
+.site-zoo {
+  &__inner {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 35px;
+      height: 100px;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      background-image: url("../../assets/images/Penguin.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 550px;
+    margin-inline: auto;
+    gap: 30px;
+  }
+
+  &__box {
+    margin-top: 40px;
+  }
+
+  &__text {
+    margin: 0;
+    width: 256px;
+  }
+
+  &__img {
+    width: auto;
+  }
+
+  &__btn {
+    position: absolute;
+    margin: 0;
+    top: -10px;
+    right: 0;
+  }
+}
+
+.monkay {
+  &::before {
+    background-image: url("../../assets/images/eagle.png");
+  }
+}
+
+.aligator {
+  &::before {
+    content: "";
+    width: 152px;
+    height: 147px;
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    background-image: url("../../assets/images/aligator.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.elephant {
+  &::before {
+    content: "";
+    width: 152px;
+    height: 147px;
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    background-image: url("../../assets/images/elephant.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.aligator-text,
+.elephant-text,
+.engles {
+  display: block;
+}
+
+.panda {
+  display: none;
+}
+
+// SITE-ZOO media 900px yozilgani
+.site-zoo {
+  &__inner {
+    &::before,
+    &::after {
+      right: -25px;
+    }
+  }
+
+  &__box {
+    width: 100%;
+    gap: 18px;
+    row-gap: 30px;
+  }
+
+  &__paragrph {
+    width: 234px;
+  }
+
+  &__text {
+    width: 351px;
+    &::after {
+      top: 260px;
+    }
+  }
+
+  &__control {
+    &::before {
+      left: 27%;
+    }
+  }
+}
+
+.gorillas {
+  &::before {
+    content: "";
+    width: 152px;
+    height: 147px;
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    background-image: url("../../assets/images/monkey.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.lemurs {
+  &::before {
+    content: "";
+    width: 152px;
+    height: 147px;
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    background-image: url("../../assets/images/lemurs.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.gorillas,
+.lemurs {
+  &::before {
+    left: 28%;
+  }
+}
+
+.gorillas-text,
+.lemurs-text {
+  display: block;
+}

@@ -4,6 +4,11 @@
 .hero {
   background-color: var.$header-color;
 
+  // background-image: url("../../assets/images/hero-bg-full.png");
+  // background-size: cover;
+  // background-position: top;
+  // height: 800px;
+
   &__inner {
     padding-top: 20px;
     padding-bottom: 40px;

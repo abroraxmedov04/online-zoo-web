@@ -9,6 +9,7 @@
   @include mix.media(640px) {
     position: fixed;
     width: 100%;
+    z-index: 10;
   }
 
   &__inner {
@@ -16,7 +17,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 15;
 
     @include mix.media(640px) {
       padding-block: 22px;
